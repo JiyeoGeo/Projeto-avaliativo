@@ -1,0 +1,14 @@
+h1 { text-align: center; font-family: "Arial"; color: #c7b6a6 }
+body { background-color: #f3decb; margin: 0px; }
+header { background-color: #8c7b69; padding: 20px; margin: 0px; }
+nav ul {
+    display: flex;
+    justify-content: center; /* centraliza */
+    list-style: none; /* remove as bolinhas */
+    gap: 30px; /* espaço entre os itens */
+    padding: 0;
+}
+nav a {
+    text-decoration: none;
+    color: #c7b6a6;
+}
