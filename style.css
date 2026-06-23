@@ -5,23 +5,20 @@
     --bg-color: #f3decb;
     --primary-color: #8c7b69;
     --accent-color: #c7b6a6;
-    --text-color: #5a4e42; /* Um tom ligeiramente mais escuro para melhorar a leitura */
+    --text-color: #5a4e42; 
     --font-main: 'Arial', sans-serif;
     --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 * {
     box-sizing: border-box;
-    /* Remove aquele flash azul ao tocar em elementos no celular (Android/iOS) */
     -webkit-tap-highlight-color: transparent; 
 }
 
-/* Deixa a borda de foco mais suave e combinando com as cores do seu site, em vez do azul padrão */
 *:focus-visible {
-    outline: 2px solid var(--primary-color); /* Usa o marrom do seu site como borda de foco */
+    outline: 2px solid var(--primary-color); 
     outline-offset: 3px;
 }
-
 
 body {
     background-color: var(--bg-color);
@@ -43,7 +40,7 @@ header {
 
 header h1 {
     font-family: "Pacifico", cursive;
-    color: var(--bg-color); /* Contraste elegante */
+    color: var(--bg-color); 
     margin: 0 0 15px 0;
     font-size: 42px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -74,7 +71,6 @@ nav a {
     position: relative;
 }
 
-/* Linha sutil que surge embaixo do link no hover */
 nav a::after {
     content: '';
     position: absolute;
@@ -118,7 +114,7 @@ main h3 {
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 10px 20px;
-    border-radius: 20px; /* Bordas mais ovais e modernas */
+    border-radius: 20px; 
     display: inline-block;
     font-size: 18px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -131,30 +127,30 @@ main p, main blockquote, main li {
     font-size: 16px;
 }
 
-/* Imagem de Destaque */
 main img {
     width: 100%;
     max-width: 750px;
     display: block;
     margin: 0 auto 40px auto;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(140, 123, 105, 0.15); /* Sombra suave com o tom do site */
+    box-shadow: 0 10px 25px rgba(140, 123, 105, 0.15); 
 }
 
 /* ==========================================================================
    4. COMPONENTES DO LAYOUT (Apresentação, Conteúdo Flex e Raças)
    ========================================================================== */
 
-/* Bloco superior de introdução lateral */
+/* ALTERADO AQUI: Ajuste nas margens para desgrudar da imagem e do topo! */
 .apresentacao h2 {
-    margin-bottom: 20px;
-    text-align: left; /* Alinhado à esquerda combina mais com o bloco flex abaixo */
+    margin-top: 20px;    
+    margin-bottom: 35px; 
+    text-align: left;    
 }
 
 .conteudo-flex {
     display: flex;         
     align-items: center;   
-    gap: 40px; /* Mais espaço para o layout respirar */
+    gap: 40px; 
     margin-bottom: 50px;
 }
 
@@ -172,19 +168,17 @@ main img {
     margin: 0;
 }
 
-/* Cards / Blocos das Raças de Gatos */
 .raca {
     display: flex;
     align-items: center;
     gap: 35px;
     margin: 40px 0;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.3); /* Efeito sutil de container */
+    background-color: rgba(255, 255, 255, 0.3); 
     border-radius: 16px;
     transition: var(--transition-smooth);
 }
 
-/* Efeito interativo ao passar o mouse nos blocos de raças */
 .raca:hover {
     transform: translateY(-4px);
     background-color: rgba(255, 255, 255, 0.55);
@@ -204,7 +198,7 @@ main img {
 }
 
 .texto-raca h3 {
-    margin-top: 0; /* Corrige espaçamento interno do card */
+    margin-top: 0; 
 }
 
 /* ==========================================================================
@@ -232,7 +226,7 @@ footer p {
 }
 
 footer p:first-child {
-    color: var(--bg-color); /* Destaca a frase principal */
+    color: var(--bg-color); 
     font-weight: 500;
 }
 
@@ -261,286 +255,5 @@ footer p:first-child {
     main h3 {
         display: block;
         text-align: center;
-    }
-}
-/* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS
-   ========================================================================== */
-:root {
-    --bg-color: #f3decb;
-    --primary-color: #8c7b69;
-    --accent-color: #c7b6a6;
-    --text-color: #5a4e42; /* Um tom ligeiramente mais escuro para melhorar a leitura */
-    --font-main: 'Arial', sans-serif;
-    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-* {
-    box-sizing: border-box;
-    /* Remove aquele flash azul ao tocar em elementos no celular (Android/iOS) */
-    -webkit-tap-highlight-color: transparent; 
-}
-
-/* Deixa a borda de foco mais suave e combinando com as cores do seu site, em vez do azul padrão */
-*:focus-visible {
-    outline: 2px solid var(--primary-color); /* Usa o marrom do seu site como borda de foco */
-    outline-offset: 3px;
-}
-
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    font-family: var(--font-main);
-    -webkit-font-smoothing: antialiased;
-}
-
-/* ==========================================================================
-   2. HEADER & NAVEGAÇÃO
-   ========================================================================== */
-header {
-    background-color: var(--primary-color);
-    padding: 30px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-header h1 {
-    font-family: "Pacifico", cursive;
-    color: var(--bg-color); /* Contraste elegante */
-    margin: 0 0 15px 0;
-    font-size: 42px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-header p {
-    color: var(--accent-color);
-    margin: 0 0 20px 0;
-    font-size: 16px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 35px;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    transition: var(--transition-smooth);
-    position: relative;
-}
-
-/* Linha sutil que surge embaixo do link no hover */
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--bg-color);
-    transition: var(--transition-smooth);
-}
-
-nav a:hover {
-    color: var(--bg-color);
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ==========================================================================
-   3. ESTRUTURA PRINCIPAL (MAIN)
-   ========================================================================== */
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 30px;
-}
-
-main h2 {
-    color: var(--primary-color);
-    margin-top: 60px;
-    margin-bottom: 25px;
-    font-size: 32px;
-    text-align: center;
-    font-weight: 700;
-}
-
-main h3 {
-    color: var(--bg-color);
-    background-color: var(--primary-color);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border-radius: 20px; /* Bordas mais ovais e modernas */
-    display: inline-block;
-    font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-main p, main blockquote, main li {
-    color: var(--text-color);
-    line-height: 1.8;
-    text-align: justify;
-    font-size: 16px;
-}
-
-/* Imagem de Destaque */
-main img {
-    width: 100%;
-    max-width: 750px;
-    display: block;
-    margin: 0 auto 40px auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(140, 123, 105, 0.15); /* Sombra suave com o tom do site */
-}
-
-/* ==========================================================================
-   4. COMPONENTES DO LAYOUT (Apresentação, Conteúdo Flex e Raças)
-   ========================================================================== */
-
-/* Bloco superior de introdução lateral */
-.apresentacao h2 {
-    margin-bottom: 20px;
-    text-align: left; /* Alinhado à esquerda combina mais com o bloco flex abaixo */
-}
-
-.conteudo-flex {
-    display: flex;         
-    align-items: center;   
-    gap: 40px; /* Mais espaço para o layout respirar */
-    margin-bottom: 50px;
-}
-
-.conteudo-flex img {
-    max-width: 50%;        
-    height: auto;          
-    border-radius: 16px;    
-    box-shadow: 0 8px 20px rgba(140, 123, 105, 0.12);
-}
-
-.conteudo-flex p {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
-}
-
-/* Cards / Blocos das Raças de Gatos */
-.raca {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    margin: 40px 0;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.3); /* Efeito sutil de container */
-    border-radius: 16px;
-    transition: var(--transition-smooth);
-}
-
-/* Efeito interativo ao passar o mouse nos blocos de raças */
-.raca:hover {
-    transform: translateY(-4px);
-    background-color: rgba(255, 255, 255, 0.55);
-    box-shadow: 0 12px 24px rgba(140, 123, 105, 0.1);
-}
-
-.raca img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.texto-raca {
-    flex: 1;
-}
-
-.texto-raca h3 {
-    margin-top: 0; /* Corrige espaçamento interno do card */
-}
-
-/* ==========================================================================
-   5. FOOTER (RODAPÉ)
-   ========================================================================== */
-footer {
-    background-color: var(--primary-color);
-    color: var(--accent-color);
-    padding: 30px 20px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.footer-conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-footer p {
-    margin: 0;
-    letter-spacing: 0.3px;
-}
-
-footer p:first-child {
-    color: var(--bg-color); /* Destaca a frase principal */
-    font-weight: 500;
-}
-
-/* ==========================================================================
-   6. RESPONSIVIDADE (MOBILE)
-   ========================================================================== */
-@media (max-width: 768px) {
-    main {
-        padding: 0 20px;
-    }
-    
-    .conteudo-flex, .raca {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
-
-    .conteudo-flex img {
-        max-width: 100%;
-    }
-
-    .apresentacao h2 {
-        text-align: center;
-    }
-    
-    main h3 {
-        display: block;
-        text-align: center;
-    }
-}
-.raca img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.texto-raca {
-    flex: 1;
-}
-
-@media (max-width: 768px) {
-    .raca {
-        flex-direction: column;
     }
 }
